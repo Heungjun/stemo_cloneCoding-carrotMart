@@ -68,3 +68,44 @@ code {
 .mobile-Appbar__actions img + img {
   margin-left: 24px;
 }
+
+/* mobileHomeList */
+.mobile-home-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile-home-list li + li {
+  border-top: solid 1px #00000022;
+}
+
+/* mobileHomeListItem */
+.mobile-home-list-item {
+  width: 90%;
+  display: flex;
+  padding: 12px 0px;
+}
+.mobile-home-list-item__image {
+  width: 96px;
+  height: 96px;
+  border-radius: 5px;
+}
+.mobile-home-list-item__description {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 15px;
+  padding: 2px 0;
+}
+.mobile-home-list-item__title {
+  font-size: 18px;
+}
+.mobile-home-list-item__address {
+  color: gray;
+  font-size: 13px;
+}
+.mobile-home-list-item__price {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 4px;
+}

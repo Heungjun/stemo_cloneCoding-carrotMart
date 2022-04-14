@@ -12,6 +12,12 @@ code {
     monospace;
 }
 
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* mobileNavigation */
 .mobile-navigation {
   width: 100%;
   position: fixed;
@@ -42,4 +48,23 @@ code {
   height: 24px;
   margin-top: -8px;
   margin-bottom: 4px;
+}
+
+/* mobileAppbar */
+.mobile-Appbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: solid 1px #00000022;
+}
+
+.mobile-Appbar__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-Appbar__actions img + img {
+  margin-left: 24px;
 }

@@ -9,7 +9,7 @@ const MobileHomeList = ({ datas }) => {
         <MobileHomeListItem
           key={data.id}
           imagePath={data.imagePath}
-          title={data.id}
+          title={data.title}
           address={data.address}
           price={data.price}
         />

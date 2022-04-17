@@ -2,11 +2,13 @@ import React from "react";
 import MobileHomeListItem from "./MobileHomeListItem";
 
 const MobileHomeList = ({ datas }) => {
+  console.log(datas)
   return (
     <ul className="mobile-home-list">
       {datas?.map((data) => (
         <MobileHomeListItem
-          src={data.imagePath}
+          key={data.id}
+          imagePath={data.imagePath}
           title={data.id}
           address={data.address}
           price={data.price}

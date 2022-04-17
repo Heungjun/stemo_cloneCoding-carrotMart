@@ -2,7 +2,6 @@ import React from "react";
 import MobileHomeListItem from "./MobileHomeListItem";
 
 const MobileHomeList = ({ datas }) => {
-  console.log(datas)
   return (
     <ul className="mobile-home-list">
       {datas?.map((data) => (

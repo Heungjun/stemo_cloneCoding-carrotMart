@@ -5,19 +5,19 @@ import "./component/MobileNavigation";
 import MobileNavigation from "./component/MobileNavigation";
 import testDatas from "./data/HomeListData";
 
-import icons_menu from "./asset/icons/icons_menu.png";
-import icons_notification from "./asset/icons/icons_notification.png";
-import icons_search from "./asset/icons/icons_search.png";
+import SearchIcon from "./component/icons/SearchIcon";
+import MenuIcon from "./component/icons/MenuIcon";
+import NotificationIcon from "./component/icons/NotificationIcon";
 
 function App() {
   return (
     <div className="App">
-      <MobileAppBar leading={
-        <div style={{ fontSize: "22px", fontWeight: "bold" }}>괘법동</div>}
-         actions={[
-        <img className="icon" src={icons_search} />,
-        <img className="icon" src={icons_menu} />,
-        <img className="icon" src={icons_notification} />]} />
+      <MobileAppBar
+        leading={
+          <div style={{ fontSize: "22px", fontWeight: "bold" }}>괘법동</div>
+        }
+        actions={[<SearchIcon />, <MenuIcon />, <NotificationIcon />]}
+      />
       <section>
         <MobileHomeList datas={testDatas} />
       </section>

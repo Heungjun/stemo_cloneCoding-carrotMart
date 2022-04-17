@@ -1,27 +1,24 @@
+import { useState } from "react";
 import "./common.css";
-import MobileAppBar from "./component/MobileAppBar";
-import MobileHomeList from "./component/MobileHomeList";
 import "./component/MobileNavigation";
 import MobileNavigation from "./component/MobileNavigation";
-import testDatas from "./data/HomeListData";
-
-import SearchIcon from "./component/icons/SearchIcon";
-import MenuIcon from "./component/icons/MenuIcon";
-import NotificationIcon from "./component/icons/NotificationIcon";
+import HomePage from "./pages/HomePage";
 
 function App() {
+  const tabView = (index) => {
+    switch (index) {
+      case 0:
+      default:
+        return <HomePage />;
+    }
+  };
+
+  const [index, setIndex] = useState(0);
+
   return (
     <div className="App">
-      <MobileAppBar
-        leading={
-          <div style={{ fontSize: "22px", fontWeight: "bold" }}>괘법동</div>
-        }
-        actions={[<SearchIcon />, <MenuIcon />, <NotificationIcon />]}
-      />
-      <section>
-        <MobileHomeList datas={testDatas} />
-      </section>
-      <MobileNavigation />
+      {tabView(index)}
+      <MobileNavigation currentIndex={index} onClick={setIndex} />
     </div>
   );
 }

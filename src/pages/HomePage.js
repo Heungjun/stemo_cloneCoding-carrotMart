@@ -14,11 +14,13 @@ const HomePage = () => {
         leading={
           <div style={{ fontSize: "22px", fontWeight: "bold" }}>괘법동</div>
         }
-        actions={[<SearchIcon />, <MenuIcon />, <NotificationIcon />]}
+        actions={[
+          <SearchIcon key="searchIcon" />,
+          <MenuIcon key="menuIcon" />,
+          <NotificationIcon key="notificationIcon" />,
+        ]}
       />
-      <section>
-        <MobileHomeList datas={testDatas} />
-      </section>
+      <MobileHomeList datas={testDatas} />
     </>
   );
 };

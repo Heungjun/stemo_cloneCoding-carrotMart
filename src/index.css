@@ -1,145 +1,153 @@
 body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 .icon {
-	width: 24px;
-	height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .small-icon {
-	width: 12px;
-	height: 12px;
+  width: 18px;
+  height: 18px;
 }
 
+.ml5p {
+  margin-left: 5px;
+}
 /* mobileNavigation */
 .mobile-navigation {
-	width: 100%;
-	position: sticky;
-	bottom: 0;
-	background-color: white;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  background-color: white;
 }
 
 .mobile-navigation__navigator {
-	display: flex;
-	justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .mobile-navigation__item {
-	flex: 1;
-	height: 72px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-size: 14px;
+  flex: 1;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 }
 .mobile-navigation__item:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .mobile-navigation__item-icon {
-	width: 24px;
-	height: 24px;
-	margin-top: -8px;
-	margin-bottom: 4px;
+  width: 24px;
+  height: 24px;
+  margin-top: -8px;
+  margin-bottom: 4px;
 }
 
 /* mobileAppbar */
 .mobile-Appbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 15px;
-	border-bottom: solid 1px #00000022;
-	position: sticky;
-	top: 0;
-	background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: solid 1px #00000022;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
 }
 
 .mobile-Appbar__actions {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .mobile-Appbar__actions img + img {
-	margin-left: 24px;
+  margin-left: 24px;
 }
 
 /* mobileHomeList */
 .mobile-home-list {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .mobile-home-list li + li {
-	border-top: solid 1px #00000022;
+  border-top: solid 1px #00000022;
 }
 
 /* mobileHomeListItem */
 .mobile-home-list-item {
-	width: 90%;
-	display: flex;
-	position: relative;
-	padding: 12px 0px;
+  width: 90%;
+  display: flex;
+  position: relative;
+  padding: 12px 0px;
 }
 .mobile-home-list-item__image {
-	width: 96px;
-	height: 96px;
-	border-radius: 5px;
+  width: 96px;
+  height: 96px;
+  border-radius: 5px;
 }
 .mobile-home-list-item__description {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-	margin-left: 15px;
-	padding: 2px 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 15px;
+  padding: 2px 0;
 }
 .mobile-home-list-item__title {
-	font-size: 18px;
+  font-size: 18px;
 }
 .mobile-home-list-item__address {
-	color: gray;
-	font-size: 13px;
+  color: gray;
+  font-size: 13px;
 }
 .mobile-home-list-item__price {
-	font-weight: bold;
-	font-size: 16px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .mobile-home-list-item__l3 {
-	display: flex;
-	margin-top: 4px;
-	align-items: center;
-	gap: 6px;
+  display: flex;
+  margin-top: 4px;
+  align-items: center;
+  gap: 6px;
 }
 
 .mobile-home-list-item__status {
-	color: white;
-	padding: 3px 6px;
-	border-radius: 3px;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
 }
 .mobile-home-list-item__status--stay {
-	background-color: aqua;
+  background-color: teal;
 }
 
 .mobile-home-list-item__status--done {
-	background-color: black;
+  background-color: black;
 }
 
 .mobile-home-list-item__detail {
-	position: absolute;
-	right: 0;
-	bottom: 15px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  right: 0;
+  bottom: 15px;
 }

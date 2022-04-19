@@ -1,4 +1,6 @@
 import React from 'react';
+import icons_answer from '../asset/icons/icons_answer.png';
+import icons_heart from '../asset/icons/icons_heart.png';
 
 const MobileHomeListItem = ({
 	data: {
@@ -36,6 +38,9 @@ const MobileHomeListItem = ({
 		 *  Description: ["판매중", "예약중", "판매완료"]
 		 */
 		status = 0,
+
+		chat,
+		like,
 	},
 }) => {
 	const statusView = (status) => {
@@ -57,6 +62,15 @@ const MobileHomeListItem = ({
 		}
 	};
 
+	const smallIconView = (icon, number) => {
+		return (
+			<>
+				<img className="small-icon" src={icon} />
+				<span>{number}</span>
+			</>
+		);
+	};
+
 	return (
 		<li className="mobile-home-list-item">
 			<img className="mobile-home-list-item__image" src={imagePath} />
@@ -68,6 +82,11 @@ const MobileHomeListItem = ({
 					<div className="mobile-home-list-item__price">
 						{price ? price.toLocaleString('ko-KR') + '원' : '나눔'}
 					</div>
+				</div>
+				<div className="mobile-home-list-item__detail">
+					{!!chat && smallIconView(icons_answer, chat)}
+					<span> </span>
+					{!!like && smallIconView(icons_heart, like)}
 				</div>
 			</div>
 		</li>

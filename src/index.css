@@ -17,6 +17,11 @@ code {
 	height: 24px;
 }
 
+.small-icon {
+	width: 12px;
+	height: 12px;
+}
+
 /* mobileNavigation */
 .mobile-navigation {
 	width: 100%;
@@ -86,6 +91,7 @@ code {
 .mobile-home-list-item {
 	width: 90%;
 	display: flex;
+	position: relative;
 	padding: 12px 0px;
 }
 .mobile-home-list-item__image {
@@ -118,6 +124,7 @@ code {
 	align-items: center;
 	gap: 6px;
 }
+
 .mobile-home-list-item__status {
 	color: white;
 	padding: 3px 6px;
@@ -129,4 +136,10 @@ code {
 
 .mobile-home-list-item__status--done {
 	background-color: black;
+}
+
+.mobile-home-list-item__detail {
+	position: absolute;
+	right: 0;
+	bottom: 15px;
 }

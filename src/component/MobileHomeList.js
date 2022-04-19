@@ -1,20 +1,14 @@
-import React from "react";
-import MobileHomeListItem from "./MobileHomeListItem";
+import React from 'react';
+import MobileHomeListItem from './MobileHomeListItem';
 
 const MobileHomeList = ({ datas }) => {
-  return (
-    <ul className="mobile-home-list">
-      {datas?.map((data) => (
-        <MobileHomeListItem
-          key={data.id}
-          imagePath={data.imagePath}
-          title={data.title}
-          address={data.address}
-          price={data.price}
-        />
-      ))}
-    </ul>
-  );
+	return (
+		<ul className="mobile-home-list">
+			{datas?.map((data) => (
+				<MobileHomeListItem key={data.id} data={data} />
+			))}
+		</ul>
+	);
 };
 
 export default MobileHomeList;

@@ -17,6 +17,14 @@ code {
   height: 24px;
 }
 
+.small-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.ml5p {
+  margin-left: 5px;
+}
 /* mobileNavigation */
 .mobile-navigation {
   width: 100%;
@@ -59,6 +67,7 @@ code {
   border-bottom: solid 1px #00000022;
   position: sticky;
   top: 0;
+  z-index: 100;
   background-color: white;
 }
 
@@ -86,6 +95,7 @@ code {
 .mobile-home-list-item {
   width: 90%;
   display: flex;
+  position: relative;
   padding: 12px 0px;
 }
 .mobile-home-list-item__image {
@@ -110,5 +120,48 @@ code {
 .mobile-home-list-item__price {
   font-weight: bold;
   font-size: 16px;
+}
+
+.mobile-home-list-item__l3 {
+  display: flex;
   margin-top: 4px;
+  align-items: center;
+  gap: 6px;
+}
+
+.mobile-home-list-item__status {
+  color: white;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.mobile-home-list-item__status--stay {
+  background-color: teal;
+}
+
+.mobile-home-list-item__status--done {
+  background-color: black;
+}
+
+.mobile-home-list-item__detail {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  right: 0;
+  bottom: 15px;
+}
+
+/* HomeFloatingButton */
+.home-floating-button {
+  width: 60px;
+  height: 60px;
+  background-color: orange;
+  color: white;
+  font-size: 40px;
+  border: none;
+  border-radius: 100px;
+  position: fixed;
+  right: 20px;
+  bottom: 9vh;
 }

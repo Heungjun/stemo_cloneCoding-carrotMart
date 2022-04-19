@@ -6,6 +6,7 @@ import SearchIcon from "../component/icons/SearchIcon";
 import NotificationIcon from "../component/icons/NotificationIcon";
 
 import testDatas from "../data/HomeListData";
+import HomeFloatingButton from "../component/HomeFloatingButton";
 
 const HomePage = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage = () => {
         ]}
       />
       <MobileHomeList datas={testDatas} />
+      <HomeFloatingButton />
     </>
   );
 };

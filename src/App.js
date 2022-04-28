@@ -3,10 +3,13 @@ import "./common.css";
 import "./component/MobileNavigation";
 import MobileNavigation from "./component/MobileNavigation";
 import HomePage from "./pages/HomePage";
+import NeighborhoodPage from "./pages/NeighborhoodPage";
 
 function App() {
   const tabView = (index) => {
     switch (index) {
+      case 1:
+        return <NeighborhoodPage />;
       case 0:
       default:
         return <HomePage />;

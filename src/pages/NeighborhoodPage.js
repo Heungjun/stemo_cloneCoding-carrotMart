@@ -1,9 +1,10 @@
 import React from "react";
 import MobileAppBar from "../component/MobileAppBar";
-import MobileHomeList from "../component/MobileHomeList";
 import SearchIcon from "../component/icons/SearchIcon";
 import InterestMenuIcon from "../component/icons/InterestMenuIcon";
 import NotificationIcon from "../component/icons/NotificationIcon";
+import NeighborhoodListItem from "../component/NeighborhoodListItem";
+import WriteFloatingButton from "../component/WriteFloatingButton";
 
 const NeighborhoodPage = () => {
   const interestMenus = [
@@ -26,6 +27,13 @@ const NeighborhoodPage = () => {
     "기타",
   ];
 
+  const interestMenuView = () =>
+    interestMenus.map((row) => (
+      <li key={row} className="interest-menu__item">
+        {row}
+      </li>
+    ));
+
   return (
     <>
       <MobileAppBar
@@ -38,100 +46,78 @@ const NeighborhoodPage = () => {
           <NotificationIcon key="notificationIcon" />,
         ]}
       />
-      <section style={{ overflowX: "scroll" }}>
-        <ul
-          style={{
-            width: "max-content",
-            backgroundColor: "#dde0ee66",
-            padding: "12px 16px",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            gap: "10px",
-            overflowX: "hidden",
-            overflowY: "hidden",
-            flexWrap: "nowrap",
-          }}
-        >
-          {interestMenus.map((row) => (
-            <li
-              key={row}
-              style={{
-                flex: "0 0 auto",
-                height: "min-content",
-                backgroundColor: "white",
-                border: "solid 1px gray",
-                borderRadius: "5px",
-                padding: "10px 15px",
-                textAlign: "center",
-                fontSize: "13px",
-                fontWeight: "bold",
-              }}
-            >
-              {row}
-            </li>
-          ))}
-        </ul>
+
+      <section className="interest-menu__wrap">
+        <ul className="interest-menu__list">{interestMenuView()}</ul>
       </section>
-      <ul
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "10px",
-          backgroundColor: "#dde0ee66",
-        }}
-      >
-        <li style={{ backgroundColor: "white" }}>
-          <div>동네질문</div>
 
-          <h1>Q.포켓몬 빵 거래하면서 비틀즈 사주셨던분..ㅊㅐ팅주세요</h1>
+      <ul className="neighborhood__list">
+        <NeighborhoodListItem
+          key={1}
+          data={{
+            writeType: "동네질문",
+            content:
+              "Q.안녕하세요 혹시 모라중학교 근처에 프린트랑 스캔복사 같은거 할 수 있는 곳이 있을까요? 어머님이 양도 작고 급한건 동사무소(행정센터?)에서 된다구 하고 해보셨다고 하셔서 다녀왔는데 안되기도 하고 안되기만 했으면 그만인데 무슨 안좋은 일이라도 있으셨는지 젊은 사람이 부탁해서 그런건지 엄청 불친절하게 상대하셔서 기분만 상하고 돌아왔네요.\n구남역이나 모라중학교나 신모라사거리?에 프린트하고 스캔 가능 한 곳 알려주시면 너무너무 감사하겠습니다.",
+            nickName: "욱정",
+            area: "사상구 모라동",
+            time: "15분 전",
+            wonder: 0,
+            answer: 0,
+          }}
+        />
+        <NeighborhoodListItem
+          key={2}
+          data={{
+            writeType: "해주세요",
+            content: "스냅스에서 물건 구매하면 집 앞까지 오나요??",
+            nickName: "sagarayo",
+            area: "사상구 주례제2동",
+            time: "33분 전",
+            wonder: 0,
+            answer: 5,
+          }}
+        />
+        <NeighborhoodListItem
+          key={3}
+          data={{
+            writeType: "동네질문",
+            content: "Q.포켓몬 빵 거래하면서 비틀즈 사주셨던분..ㅊㅐ팅주세요",
+            nickName: "초코하임",
+            area: "사상구 모라동",
+            time: "2시간 전",
+            wonder: 3,
+            answer: 6,
+          }}
+        />
+        <NeighborhoodListItem
+          key={4}
+          data={{
+            writeType: "동네질문",
+            content:
+              "Q.제가 프리랜서라 늦게도 일을 하는 편인데 사상에 24시간 카페가\n있을까요?? 아니면 늦게까지 오픈하는 곳이 있는지도 궁금합니다!",
+            nickName: "B군",
+            area: "괘법동",
+            time: "2시간 전",
+            wonder: 1,
+            answer: 2,
+          }}
+        />
 
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <div>초코하임*사상구 모라동</div>
-            <div>2시간 전</div>
-          </div>
-          <div style={{ display: "flex" }}>
-            <div>궁금해요 3</div>
-            <div>답변 6</div>
-          </div>
-        </li>
-
-        <li style={{ backgroundColor: "white" }}>
-          <div>동네질문</div>
-
-          <h1>
-            Q.제가 프리랜서라 늦게도 일을 하는 편인데 사상에 24시간 카페가
-            있을까요?? 아니면 늦게까지 오픈하는 곳이 있는지도 궁금합니다!
-          </h1>
-
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <div>B군*괘법동</div>
-            <div>2시간 전</div>
-          </div>
-          <div style={{ display: "flex" }}>
-            <div>궁금해요 1</div>
-            <div>답변 2</div>
-          </div>
-        </li>
-
-        <li style={{ backgroundColor: "white" }}>
-          <div>취미생활</div>
-
-          <h1>
-            이번 일요일 장흥 제암산 우리나라쬐고 진달래명소 가실분계실까요
-            25인승 봉고차로갑니다. 현재8명입니다
-          </h1>
-
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <div>수니*사상구 모라동</div>
-            <div>5시간 전</div>
-          </div>
-          <div style={{ display: "flex" }}>
-            <div>공감하기</div>
-            <div>댓글쓰기</div>
-          </div>
-        </li>
+        <NeighborhoodListItem
+          key={5}
+          data={{
+            writeType: "취미생활",
+            content:
+              "이번 일요일 장흥 제암산 우리나라쬐고 진달래명소 가실분계실까요\n25인승 봉고차로갑니다. 현재8명입니다",
+            nickName: "수니",
+            area: "사상구 모라동",
+            time: "5시간 전",
+            wonder: 0,
+            answer: 0,
+          }}
+        />
       </ul>
+      <WriteFloatingButton />
     </>
   );
 };

@@ -152,6 +152,90 @@ code {
   bottom: 15px;
 }
 
+/* NeighborhoodPage */
+.interest-menu__wrap {
+  overflow-x: scroll;
+}
+.interest-menu__wrap::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+}
+
+.interest-menu__list {
+  width: max-content;
+  background-color: #dde0ee66;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  -webkit-scrollbar: hide;
+}
+
+.interest-menu__item {
+  flex: 0 0 auto;
+  height: min-content;
+  background-color: white;
+  border: solid 1px gray;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.neighborhood__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #dde0ee66;
+}
+
+.neighborhood__item-top {
+  background-color: white;
+  padding: 15px;
+}
+.neighborhood__item-type {
+  display: flex;
+  width: max-content;
+  background-color: #dde0ee66;
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #353535;
+  word-break: keep-all;
+}
+.neighborhood__item-content {
+  font-size: 16px;
+  max-lines: 3;
+  text-overflow: ellipsis;
+}
+.neighborhood__item-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #353535;
+}
+.neighborhood__item-bottom {
+  background-color: white;
+  margin-top: 1px;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+}
+.neighborhood__item-bottom > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.neighborhood__item-bottom img {
+  width: 24px;
+  height: 24px;
+}
+
 /* HomeFloatingButton */
 .home-floating-button {
   width: 60px;
@@ -164,4 +248,22 @@ code {
   position: fixed;
   right: 20px;
   bottom: 9vh;
+}
+
+.write-floating-button {
+  width: 60px;
+  height: 60px;
+  background-color: orange;
+  color: white;
+  font-size: 40px;
+  border: none;
+  border-radius: 100px;
+  position: fixed;
+  right: 20px;
+  bottom: 9vh;
+}
+
+.write-floating-button img {
+  width: 24px;
+  height: 24px;
 }
